@@ -10,7 +10,7 @@ ConsoleSymbolData backBuffer[screenRows][screenColumns];
 ConsoleSymbolData screenBuffer[screenRows][screenColumns];
 
 // Functions
-// Получаем дескриптор консоли, скроем мигающий курсор и зададим начальные значения
+// РџРѕР»СѓС‡Р°РµРј РґРµСЃРєСЂРёРїС‚РѕСЂ РєРѕРЅСЃРѕР»Рё, СЃРєСЂРѕРµРј РјРёРіР°СЋС‰РёР№ РєСѓСЂСЃРѕСЂ Рё Р·Р°РґР°РґРёРј РЅР°С‡Р°Р»СЊРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ
 void RenderSystemInitialize()
 {
     // Get console handle
@@ -37,8 +37,8 @@ void RenderSystemInitialize()
 
 }
 
-// Будем очищать все символы backBuffer - делать все символы
-// нулевыми и с черным фоном
+// Р‘СѓРґРµРј РѕС‡РёС‰Р°С‚СЊ РІСЃРµ СЃРёРјРІРѕР»С‹ backBuffer - РґРµР»Р°С‚СЊ РІСЃРµ СЃРёРјРІРѕР»С‹
+// РЅСѓР»РµРІС‹РјРё Рё СЃ С‡РµСЂРЅС‹Рј С„РѕРЅРѕРј
 void RenderSystemClear()
 {
     for (int r = 0; r < screenRows; ++r)
@@ -52,7 +52,7 @@ void RenderSystemClear()
     }
 }
 
-// Запись одного символа в backBuffer в ячейку на строке r и столбце c
+// Р—Р°РїРёСЃСЊ РѕРґРЅРѕРіРѕ СЃРёРјРІРѕР»Р° РІ backBuffer РІ СЏС‡РµР№РєСѓ РЅР° СЃС‚СЂРѕРєРµ r Рё СЃС‚РѕР»Р±С†Рµ c
 void RenderSystemDrawChar(int r, int c, char symbol, ConsoleColor symbolColor, ConsoleColor backgroundColor)
 {
     backBuffer[r][c].symbol = symbol;
@@ -60,7 +60,7 @@ void RenderSystemDrawChar(int r, int c, char symbol, ConsoleColor symbolColor, C
     backBuffer[r][c].backgroundColor = backgroundColor;
 }
 
-// Запись строки символов в backBuffer начиная с ячейки на строке r и столбце c и дальше вправо
+// Р—Р°РїРёСЃСЊ СЃС‚СЂРѕРєРё СЃРёРјРІРѕР»РѕРІ РІ backBuffer РЅР°С‡РёРЅР°СЏ СЃ СЏС‡РµР№РєРё РЅР° СЃС‚СЂРѕРєРµ r Рё СЃС‚РѕР»Р±С†Рµ c Рё РґР°Р»СЊС€Рµ РІРїСЂР°РІРѕ
 void RenderSystemDrawText(int r, int c, const char* text, ConsoleColor symbolColor, ConsoleColor backgroundColor)
 {
     int column = c;
@@ -90,7 +90,7 @@ void SetConsoleColor (ConsoleColor symbolColor, ConsoleColor backgroundColor)
     SetConsoleTextAttribute(consoleHandle, consoleColor);
 }
 
-// Последовательно сравним ячейки backBuffer и screenBuffer отрисовывая в консоль изменившиейся
+// РџРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕ СЃСЂР°РІРЅРёРј СЏС‡РµР№РєРё backBuffer Рё screenBuffer РѕС‚СЂРёСЃРѕРІС‹РІР°СЏ РІ РєРѕРЅСЃРѕР»СЊ РёР·РјРµРЅРёРІС€РёРµР№СЃСЏ
 void RenderSystemFlush()
 {
     bool screenBufferModified = false;
