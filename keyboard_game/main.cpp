@@ -69,7 +69,7 @@ int main() {
     }
 
     system("cls");
-    printf("\n\tPress any key to continue...")
+    printf("\n\tPress any key to continue...");
 
     _getch();
 
