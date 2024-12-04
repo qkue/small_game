@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1731604986 source:c:\c++\proj\first_rpg_game\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<Windows.h>
+	<conio.h>
+	<ctype.h>
+	<vector>
+	"consoleColor.h"
+	"level.h"
+	"weaponType.h"
+	"unitType.h"
+	"unitData.h"
+
+1730205890 c:\c++\proj\first_rpg_game\consolecolor.h
+
+1731592886 c:\c++\proj\first_rpg_game\level.h
+	"consoleColor.h"
+
+1731580129 c:\c++\proj\first_rpg_game\weapontype.h
+	<vector>
+	"level.h"
+
+1731573031 c:\c++\proj\first_rpg_game\unittype.h
+	"level.h"
+	"weaponType.h"
+
+1730992273 c:\c++\proj\first_rpg_game\unitdata.h
+	"unitType.h"
+	"weaponType.h"
+
