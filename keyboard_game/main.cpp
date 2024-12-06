@@ -71,7 +71,7 @@ int main() {
     system("cls");
     printf("\n\tPress any key to continue...");
 
-    _getch();
+    _getch()
 
     return 0;
 

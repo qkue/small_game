@@ -1,10 +1,11 @@
 {
     "configurations": [
         {
-            "name": "(Windows) Запустить",
+            "name": "Запустить",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "C://C++//small_g//small_game//simple_render_in_console//main.exe",
+            //"program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
