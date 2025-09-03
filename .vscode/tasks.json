@@ -8,7 +8,7 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "-Wall",
-                "-fexceptions",
+                //"-fexceptions",
                 //"${workspaceFolder}\\*.cpp",
                 "${fileDirname}\\**.cpp",
                 //"${fileDirname}\\**.h",
